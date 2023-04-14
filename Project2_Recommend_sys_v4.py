@@ -76,17 +76,17 @@ Shoppee wants to launch the first trial Recommend sys system on men's fashion ca
     st.markdown("[Link to  Shoppe app](https://shopee.vn/Th%E1%BB%9Di-Trang-Nam-cat.11035567/)")
     st.image("Shopee-logo.png")
     
-    filename = "Products_ThoiTrangNam_raw_tokenize.csv"
-    df = load_data(filename)
-    sorted_df=df.groupby(['sub_category']).mean()['rating'].sort_values(ascending= False)
-    st.markdown("Men's Fashion Category")
-    st.write(sorted_df)
-    fig, ax = plt.subplots()
-    sorted_df.plot(kind='bar', ax=ax)
-    ax.set_title('Average rating by sub_category')
-    ax.set_xlabel('sub_category')
-    ax.set_ylabel('Average rating')
-    st.pyplot(fig)
+    #filename = "Products_ThoiTrangNam_raw_tokenize.csv"
+    #df = load_data(filename)
+    #sorted_df=df.groupby(['sub_category']).mean()['rating'].sort_values(ascending= False)
+    #st.markdown("Men's Fashion Category")
+    #st.write(sorted_df)
+    #fig, ax = plt.subplots()
+    #sorted_df.plot(kind='bar', ax=ax)
+    #ax.set_title('Average rating by sub_category')
+    #ax.set_xlabel('sub_category')
+    #ax.set_ylabel('Average rating')
+    #st.pyplot(fig)
 elif choice == 'Content-based Filtering':
     filename = "Products_ThoiTrangNam_raw_tokenize.csv"
     df = load_data(filename)
