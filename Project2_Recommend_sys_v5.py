@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-#import re
 from gensim import corpora, models, similarities
 import matplotlib.pyplot as plt
 import numpy as np
@@ -19,7 +18,6 @@ def load_data(filename):
 @st.cache_data
 def train_model(df):
     texts= [[text for text in x.split()] for x in df.products_wt]
-    #texts = [[re.sub('[0-9]+','', e) for e in text] for text in texts] # số
     texts = [[t.lower() for t in text if not t in ['', ' ', ',', '.', '...', '-',':', ';', '?', '%', '_%' , '(', ')', '+', '/', 'g', 'ml']] for text in  texts] # ký tự đặc biệt
     dictionary = corpora.Dictionary(texts)
     #dictionary.token2id 
