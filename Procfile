@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run Project2_Recommend_sys_v4.py
